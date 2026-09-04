@@ -40,15 +40,15 @@
       </p>
     </div>
 
-    <form class="grid" style="gap:var(--s-4)" data-demo-form="Signed in — this is a demo template">
+    <form class="grid" style="gap:var(--s-4)">
       <div class="field">
         <label for="l-email">Work email</label>
-        <input class="input" id="l-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required />
+        <input class="input" id="l-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" />
       </div>
 
       <div class="field">
         <label for="l-pass">Password</label>
-        <input class="input" id="l-pass" name="password" type="password" autocomplete="current-password" placeholder="••••••••••" required />
+        <input class="input" id="l-pass" name="password" type="password" autocomplete="current-password" placeholder="••••••••••" />
         <span class="hint"><a href="#" style="color:var(--fg-mute)">Forgot your password?</a></span>
       </div>
 
@@ -57,7 +57,7 @@
         Keep me signed in for 30 days
       </label>
 
-      <button class="btn btn--primary" type="submit" style="height:42px">Sign in</button>
+      <button class="btn btn--primary" type="button" onclick="window.location.href='index.html'">Sign in</button>
     </form>
 
     <p class="divider-text"><span>or continue with</span></p>
