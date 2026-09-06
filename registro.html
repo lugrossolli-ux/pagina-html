@@ -26,7 +26,7 @@
             <p class="soft">Regístrate para solicitar y revisar tus eventos.</p>
         </div>
 
-        <form class="grid" style="gap: var(--s-4)">
+        <form id="formRegistro" class="grid" style="gap: var(--s-4)" onsubmit="return validarRegistro()">
 
             <div class="field">
                 <label for="nombre">Nombre completo</label>
@@ -81,6 +81,8 @@
 
     </section>
 </main>
+
+<script src="assets/js/registro.js"></script>
 
 </body>
 </html>
