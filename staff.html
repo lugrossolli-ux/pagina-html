@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Staff - Sol de Alegría</title>
+
+    <link rel="stylesheet" href="assets/css/tokens.css">
+    <link rel="stylesheet" href="assets/css/shell.css">
+    <link rel="stylesheet" href="assets/css/ui.css">
+</head>
+
+<body>
+<div class="app" data-rail="expanded">
+    <aside class="rail">
+        <div class="rail__head">
+            <a class="brand" href="staff.html">
+                <span class="brand__mark" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="brand__word">Sol de Alegría</span>
+            </a>
+        </div>
+
+        <nav class="rail__scroll" aria-label="Menú de staff">
+            <div class="navgroup">
+                <p class="navgroup__title">Staff</p>
+                <a class="navlink" href="staff.html" aria-current="page"><span>Dashboard</span></a>
+                <a class="navlink" href="#eventos"><span>Eventos asignados</span></a>
+                <a class="navlink" href="#agenda"><span>Agenda y tareas</span></a>
+                <a class="navlink" href="#inventario"><span>Inventario</span></a>
+            </div>
+        </nav>
+
+        <div class="rail__foot">
+            <a class="btn btn--ghost" href="login.html">Cerrar sesión</a>
+        </div>
+    </aside>
+
+    <main>
+        <h1>Dashboard de Staff</h1>
+        <p class="soft">Bienvenido, Felipe Muñoz. Aquí puedes revisar tu trabajo asignado.</p>
+
+        <section class="panel">
+            <div class="panel__head">
+                <h2>Resumen de trabajo</h2>
+            </div>
+            <p>2 eventos asignados para esta semana.</p>
+            <p>Próxima tarea: preparar el sonido para el matrimonio del 18/10/2026.</p>
+        </section>
+
+        <section class="panel" id="eventos">
+            <div class="panel__head">
+                <h2>Eventos asignados</h2>
+            </div>
+            <div class="tablewrap">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Evento</th>
+                            <th>Fecha</th>
+                            <th>Responsabilidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Matrimonio Claudia Rojas</td>
+                            <td>18/10/2026</td>
+                            <td>Sonido</td>
+                        </tr>
+                        <tr>
+                            <td>Evento corporativo</td>
+                            <td>02/11/2026</td>
+                            <td>Montaje</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="panel" id="agenda">
+            <div class="panel__head">
+                <h2>Agenda y tareas</h2>
+            </div>
+            <p>18/10/2026: revisar equipos antes del matrimonio.</p>
+            <p>02/11/2026: preparar materiales para el montaje.</p>
+        </section>
+
+        <section class="panel" id="inventario">
+            <div class="panel__head">
+                <h2>Inventario pendiente</h2>
+            </div>
+            <p>3 artículos deben revisarse antes del próximo evento.</p>
+        </section>
+    </main>
+</div>
+</body>
+</html>
