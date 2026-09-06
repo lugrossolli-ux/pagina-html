@@ -151,29 +151,50 @@
         =================================================================== -->
   
     <main>
-    <h1>Eventos</h1>
+      <h1>Eventos</h1>
 
-    <form id="form_evento" onsubmit="return validarEvento()">
-        <fieldset>
-            <legend>Registrar evento</legend>
+      <section class="panel">
+        <div class="panel__head">
+          <h2>Eventos registrados</h2>
+        </div>
 
-            <div id="campos_formulario">
-                <label for="nombre">Nombre completo</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre completo" required>
-                <span class="mensaje_error" id="mensaje_nombre"></span>
-
-                <label for="correo">Correo</label>
-                <input type="email" id="correo" name="correo" placeholder="Ingrese su correo" required>
-                <span class="mensaje_error" id="mensaje_correo"></span>
-
-                <label for="evento">Evento</label>
-                <input type="text" id="evento" name="evento" placeholder="Ingrese el nombre del evento" required>
-                <span class="mensaje_error" id="mensaje_evento"></span>
-            </div>
-
-            <button type="submit">REGISTRAR</button>
-        </fieldset>
-    </form>
+        <div class="tablewrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Evento</th>
+                <th>Cliente</th>
+                <th>Fecha</th>
+                <th>Estado</th>
+                <th>Detalle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Matrimonio</td>
+                <td>Claudia Rojas</td>
+                <td>18/10/2026</td>
+                <td>Confirmado</td>
+                <td><a href="#matrimonio">Ver detalle</a></td>
+              </tr>
+              <tr>
+                <td>Cumpleaños</td>
+                <td>Diego Pérez</td>
+                <td>25/10/2026</td>
+                <td>Pendiente</td>
+                <td><a href="#cumpleanos">Ver detalle</a></td>
+              </tr>
+              <tr>
+                <td>Evento corporativo</td>
+                <td>Marcela Soto</td>
+                <td>02/11/2026</td>
+                <td>En revisión</td>
+                <td><a href="#corporativo">Ver detalle</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
     </main>
 
 <!-- =====================================================================
@@ -201,6 +222,5 @@
 
 <script src="assets/js/charts.js" defer></script>
 <script src="assets/js/app.js" defer></script>
-<script src="assets/js/evento.js"></script>
 </body>
 </html>
