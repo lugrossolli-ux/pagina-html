@@ -702,3 +702,11 @@
    below 4.5:1, so flip to the on-accent ink instead. */
 .cohort td.is-hot { color: var(--on-accent); font-weight: 500; }
 [data-theme="light"] .cohort td.is-hot { color: #FFFFFF; }
+
+.registro-form{
+  grid-column: 1 / -1;
+  max-width: 520px;
+  width: 100%;
+  margin: 0 auto;
+
+}

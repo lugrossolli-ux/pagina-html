@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Sol de Alegría</title>
+
+    <link rel="stylesheet" href="assets/css/tokens.css">
+    <link rel="stylesheet" href="assets/css/shell.css">
+    <link rel="stylesheet" href="assets/css/ui.css">
+</head>
+
+<body>
+    <main class="auth">
+    <section class="auth__form registro-form">
+
+        <a class="brand" href="index.html">
+            <span class="brand__mark" aria-hidden="true">
+                <i></i><i></i><i></i>
+            </span>
+            <span class="brand__word">Sol de Alegría</span>
+        </a>
+
+        <div>
+            <h1>Crear cuenta</h1>
+            <p class="soft">Regístrate para solicitar y revisar tus eventos.</p>
+        </div>
+
+        <form class="grid" style="gap: var(--s-4)">
+
+            <div class="field">
+                <label for="nombre">Nombre completo</label>
+                <input
+                    class="input"
+                    id="nombre"
+                    name="nombre"
+                    type="text"
+                    placeholder="Ejemplo: Franco Sepúlveda"
+                    required
+                >
+            </div>
+
+            <div class="field">
+                <label for="correo">Correo electrónico</label>
+                <input
+                    class="input"
+                    id="correo"
+                    name="correo"
+                    type="email"
+                    placeholder="franco@correo.com"
+                    required
+                >
+            </div>
+
+            <div class="field">
+                <label for="contrasena">Contraseña</label>
+                <input
+                    class="input"
+                    id="contrasena"
+                    name="contrasena"
+                    type="password"
+                    minlength="4"
+                    placeholder="Mínimo 4 caracteres"
+                    required
+                >
+            </div>
+
+            <button class="btn btn--primary" type="submit">
+                Crear cuenta
+            </button>
+
+            <a class="btn btn--ghost" href="login.html">
+                Ya tengo una cuenta
+            </a>
+
+        </form>
+
+        <p class="muted">
+            Los datos no son reales para esta version de la página.
+        </p>
+
+    </section>
+</main>
+
+</body>
+</html>
