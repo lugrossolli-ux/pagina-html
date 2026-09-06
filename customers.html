@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Overview · Brynvel Console</title>
-<meta name="description" content="Brynvel — a free HTML admin dashboard template. Analytics console with charts, data tables, command palette, dark and light themes. No frameworks, no dependencies." />
+<title>Customers · Brynvel Console</title>
+<meta name="description" content="Sortable, filterable customer data table with bulk actions and a detail drawer — Brynvel free HTML admin template." />
 
 <script>
   /* Applied before paint so the chosen theme never flashes. */
@@ -24,117 +24,15 @@
 <link rel="stylesheet" href="assets/css/tokens.css" />
 <link rel="stylesheet" href="assets/css/shell.css" />
 <link rel="stylesheet" href="assets/css/ui.css" />
-    <style>
-        /* Comentario CSS */
-        body{
-            font-family: Helvetica, sans-serif;
-            background-color: rgb(240, 240, 240);
-            text-align: center;
-        }
-
-        h1{
-            color: gray;
-            padding: 20px;
-        }
-
-        /* id porque solo hay un contenedor de dashboard en la página */
-
-
-        #imagen_evento1{
-            width: 200px;
-            border: solid 1px gray;
-
-
-            position: absolute;
-            top: 100px;
-            left: 300px;
-        }
-        #titulo_evento1{
-            position: absolute;
-            top: 80px;
-            left: 300px;
-        }
-        #imagen_evento2{
-            width: 160px;
-            border: solid 1px gray;
-
-
-            position: absolute;
-            top: 100px;
-            left: 600px;
-        }
-        #titulo_evento2{
-            position: absolute;
-            top: 80px;
-            left: 600px;
-        }
-        #imagen_evento3{
-            width: 210px;
-            border: solid 1px gray;
-
-
-            position: absolute;
-            top: 100px;
-            left: 900px;
-        }
-        #titulo_evento3{
-            position: absolute;
-            top: 80px;
-            left: 900px;
-          }
-        #imagen_evento4{
-            width: 200px;
-            border: solid 1px gray;
-
-
-            position: absolute;
-            top: 300px;
-            left: 300px;
-        }
-        #titulo_evento4{
-            position: absolute;
-            top: 280px;
-            left: 300px;
-        }
-        #imagen_evento5{
-            width: 190px;
-            border: solid 1px gray;
-
-
-            position: absolute;
-            top: 300px;
-            left: 600px;
-        }
-        #titulo_evento5{
-            position: absolute;
-            top: 280px;
-            left: 600px;
-        }
-        #imagen_evento6{
-            width: 200px;
-            border: solid 1px gray;
-
-
-            position: absolute;
-            top: 300px;
-            left: 900px;
-        }
-        #titulo_evento6{
-            position: absolute;
-            top: 280px;
-            left: 900px;
-        }
-
-            </style>
 </head>
 <body>
 
 <div class="app" data-rail="expanded" data-mobilenav="closed">
 
   <!-- ===================================================================
-       Left rail
-       =================================================================== -->
-    <aside class="rail">
+        Left rail
+        =================================================================== -->
+      <aside class="rail">
     <div class="rail__head">
       <a class="brand" href="index.html" aria-label="Brynvel — go to overview">
         <span class="brand__mark" aria-hidden="true"><i></i><i></i><i></i></span>
@@ -145,49 +43,20 @@
     <nav class="rail__scroll" aria-label="Main">
       <div class="navgroup">
         <p class="navgroup__title">Pedir evento</p>
-        <a class="navlink" href="index.html" aria-current="page">
+        <a class="navlink" href="index.html">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
-<<<<<<< HEAD
           <span>Evento</span>
-=======
-          <span>Dashboard</span>
->>>>>>> 7afedc21f1e58d3609c9f1cb863e09acc3171c93
         </a>
         <a class="navlink" href="analytics.html" >
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18"/><path d="m5 15 4-5 4 3 6-8"/></svg>
           <span>Solicitar evento</span>
         </a>
-<<<<<<< HEAD
-          <a class="navlink" href="customers.html">
+          <a class="navlink" href="customers.html" aria-current="page">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="3.2"/><path d="M22 20v-2a4 4 0 0 0-3-3.8"/><path d="M16 3.2A4 4 0 0 1 16 11"/></svg>
           <span>Detalles del evento</span>
           <span class="navlink__tag">248</span>
         </a>
 
-=======
-        <a class="navlink" href="analytics.html#realtime">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h4l3 8 6-16 3 8h4"/></svg>
-          <span>Mi perfil</span>
-          <span class="navlink__tag navlink__tag--live">LIVE</span>
-        </a>
-      </div>
-
-      <div class="navgroup">
-        <p class="navgroup__title">Manage</p>
-        <a class="navlink" href="customers.html">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="3.2"/><path d="M22 20v-2a4 4 0 0 0-3-3.8"/><path d="M16 3.2A4 4 0 0 1 16 11"/></svg>
-          <span>Mis eventos</span>
-          <span class="navlink__tag">248</span>
-        </a>
-        <a class="navlink" href="billing.html">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M2 10h20"/></svg>
-          <span>Detalle de evento</span>
-        </a>
-        <a class="navlink" href="customers.html#segments">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16"/><path d="M7 12h10"/><path d="M10 19h4"/></svg>
-          <span>Mis cotizaciones</span>
-        </a>
->>>>>>> 7afedc21f1e58d3609c9f1cb863e09acc3171c93
       </div>
 
       <div class="navgroup">
@@ -199,15 +68,7 @@
         </a>
                         <a class="navlink" href="settings.html">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1A1.6 1.6 0 0 0 9 19.4a1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1A1.6 1.6 0 0 0 4.6 9a1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1Z"/></svg>
-<<<<<<< HEAD
           <span>contacto</span>
-=======
-          <span>Detalle de cotización</span>
-        </a>
-        <a class="navlink" href="settings.html#api">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15.5 8.5 5-5"/><path d="m18 3 3 3"/><path d="M14 9a5 5 0 1 1-7 7 5 5 0 0 1 7-7Z"/></svg>
-          <span>Agenda</span>
->>>>>>> 7afedc21f1e58d3609c9f1cb863e09acc3171c93
         </a>
 
       </div>
@@ -234,42 +95,83 @@
   <div class="railscrim" aria-hidden="true"></div>
 
   <!-- ===================================================================
-       Main
-       =================================================================== -->
-<<<<<<< HEAD
-       <main>
-           <h1>eventos</h1>
-<img id="imagen_evento1" src="imagenes/evento 1.jpg" alt="Imagen del dashboard">
-        <p id="titulo_evento1">casa bonita 1</p>
-<img id="imagen_evento2" src="imagenes/evento 2.jpg" alt="Imagen del dashboard">
-        <p id="titulo_evento2">casa bonita 2</p>
-<img id="imagen_evento3" src="imagenes/evento 3.jpg" alt="Imagen del dashboard">
-        <p id="titulo_evento3">casa bonita 3</p>
-<img id="imagen_evento4" src="imagenes/evento 4.jpg" alt="Imagen del dashboard">
-        <p id="titulo_evento4">casa bonita 4</p>
-<img id="imagen_evento5" src="imagenes/evento 5.jpg" alt="Imagen del dashboard">
-        <p id="titulo_evento5">casa bonita 5</p>
-<img id="imagen_evento6" src="imagenes/evento 6.jpg" alt="Imagen del dashboard">
-        <p id="titulo_evento6">casa bonita 6</p>
+        Main
+        =================================================================== -->
+ <h1> detalle de evento</h1>
 
+    <!-- Customer detail drawer -->
+    <div class="scrim" id="drawerScrim" data-open="false" aria-hidden="true"></div>
+    <aside class="drawer" data-open="false" role="dialog" aria-modal="true" aria-label="Account detail">
+      <div class="drawer__head">
+        <div class="person">
+          <img class="avatar avatar--lg" data-drawer-avatar src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=96&h=96&fit=crop&crop=faces" width="40" height="40" alt="" />
+          <span class="person__meta">
+            <span class="person__name" data-drawer-field="name">Halden Health</span>
+            <span class="person__sub" data-drawer-field="email">ops@halden.health</span>
+          </span>
+        </div>
+        <button class="btn btn--icon" type="button" data-action="close-drawer" aria-label="Close panel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
 
-=======
-<h1> dashboar</h1>
+      <div class="drawer__body">
+        <div class="substats">
+          <div class="substats__row"><span class="substats__label">Plan</span><span class="substats__value"><span data-drawer-field="plan">Enterprise</span></span></div>
+          <div class="substats__row"><span class="substats__label">MRR</span><span class="substats__value"><span class="num" data-drawer-field="mrr">$9,400</span></span></div>
+          <div class="substats__row"><span class="substats__label">Seats</span><span class="substats__value"><span class="num" data-drawer-field="seats">184 seats</span></span></div>
+          <div class="substats__row"><span class="substats__label">Account owner</span><span class="substats__value"><span data-drawer-field="owner">Ada Ferreira</span></span></div>
+          <div class="substats__row"><span class="substats__label">Health score</span><span class="substats__value"><span class="num" data-drawer-field="health">92 / 100</span></span></div>
+        </div>
 
+        <div>
+          <p class="label" style="margin-bottom:var(--s-3)">Usage this cycle</p>
+          <div class="grid" style="gap:var(--s-4)">
+            <div class="meter">
+              <div class="meter__head"><span>Events ingested</span><span class="num muted">612k / 1M</span></div>
+              <div class="meter__track"><div class="meter__fill" style="width:61%"></div></div>
+            </div>
+            <div class="meter">
+              <div class="meter__head"><span>API calls</span><span class="num muted">88k / 100k</span></div>
+              <div class="meter__track"><div class="meter__fill meter__fill--warn" style="width:88%"></div></div>
+            </div>
+            <div class="meter">
+              <div class="meter__head"><span>Storage</span><span class="num muted">42 GB / 200 GB</span></div>
+              <div class="meter__track"><div class="meter__fill" style="width:21%"></div></div>
+            </div>
+          </div>
+        </div>
 
-      <!-- ============================================================
-           North star: one number at 3× scale, everything else subordinate
-           ============================================================ -->
-      
->>>>>>> 7afedc21f1e58d3609c9f1cb863e09acc3171c93
+        <div>
+          <p class="label" style="margin-bottom:var(--s-3)">Recent events</p>
+          <div class="feed">
+            <div class="feed__item">
+              <span class="feed__icon feed__icon--ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg></span>
+              <div class="feed__body"><p class="feed__text">Invoice <b>#4021</b> paid</p><span class="feed__time">2 days ago</span></div>
+            </div>
+            <div class="feed__item">
+              <span class="feed__icon feed__icon--info"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>
+              <div class="feed__body"><p class="feed__text">Added <b>12 seats</b></p><span class="feed__time">9 days ago</span></div>
+            </div>
+            <div class="feed__item">
+              <span class="feed__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+              <div class="feed__body"><p class="feed__text">Quarterly business review scheduled</p><span class="feed__time">3 weeks ago</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    </main>
+      <div class="drawer__foot">
+        <button class="btn btn--ghost" type="button" data-action="close-drawer">Close</button>
+        <button class="btn btn--primary" type="button" data-toast="Opened in the billing console">Manage billing</button>
+      </div>
+    </aside>
   </div>
 </div>
 
 <!-- =====================================================================
-     Command palette
-     ===================================================================== -->
+      Command palette
+      ===================================================================== -->
 <div class="scrim" id="paletteScrim" data-open="false" aria-hidden="true"></div>
 <div class="palette" data-open="false" role="dialog" aria-modal="true" aria-label="Command palette">
   <input class="palette__input" type="text" placeholder="Search pages, customers, actions…" aria-label="Search" />

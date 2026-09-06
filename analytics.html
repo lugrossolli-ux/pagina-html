@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Billing · Brynvel Console</title>
-<meta name="description" content="Plan usage meters, payment method and invoice history — Brynvel free HTML admin dashboard template." />
+<title>Analytics · Brynvel Console</title>
+<meta name="description" content="Funnel, cohort retention and traffic analytics views from the Brynvel free HTML admin dashboard template." />
 
 <script>
   /* Applied before paint so the chosen theme never flashes. */
@@ -24,6 +24,58 @@
 <link rel="stylesheet" href="assets/css/tokens.css" />
 <link rel="stylesheet" href="assets/css/shell.css" />
 <link rel="stylesheet" href="assets/css/ui.css" />
+    <style>
+        body{
+            font-family: Helvetica, sans-serif;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+        h1{
+            color: white;
+            padding: 20px;
+        }
+
+        fieldset{
+            width: 700px;
+            margin: 60px auto;
+            padding: 30px;
+            border: solid 1px white;
+            background-color: rgb(89, 32, 183);
+            text-align: left;
+        }
+
+        legend{
+            font-weight: bold;
+            padding: 1 10px;
+        }
+
+        label{
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        input[type="text"]{
+            width: 100%;
+            padding: 8px;
+            border: solid 1px gray;
+            background-color: white;
+            color: black;
+        }
+
+        button{
+            display: block;
+            margin: 30px auto 10px auto;
+            padding: 10px 30px;
+            background-color: white;
+            color: black;
+            border: solid 1px gray;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 
@@ -32,11 +84,7 @@
   <!-- ===================================================================
         Left rail
         =================================================================== -->
-<<<<<<< HEAD
-     <aside class="rail">
-=======
-   <aside class="rail">
->>>>>>> 7afedc21f1e58d3609c9f1cb863e09acc3171c93
+  <aside class="rail">
     <div class="rail__head">
       <a class="brand" href="index.html" aria-label="Brynvel — go to overview">
         <span class="brand__mark" aria-hidden="true"><i></i><i></i><i></i></span>
@@ -49,71 +97,32 @@
         <p class="navgroup__title">Pedir evento</p>
         <a class="navlink" href="index.html">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
-<<<<<<< HEAD
           <span>Evento</span>
-=======
-          <span>Dashboard</span>
->>>>>>> 7afedc21f1e58d3609c9f1cb863e09acc3171c93
         </a>
-        <a class="navlink" href="analytics.html" >
+        <a class="navlink" href="analytics.html" aria-current="page">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18"/><path d="m5 15 4-5 4 3 6-8"/></svg>
           <span>Solicitar evento</span>
         </a>
-<<<<<<< HEAD
           <a class="navlink" href="customers.html">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="3.2"/><path d="M22 20v-2a4 4 0 0 0-3-3.8"/><path d="M16 3.2A4 4 0 0 1 16 11"/></svg>
           <span>Detalles del evento</span>
           <span class="navlink__tag">248</span>
         </a>
-
+  
       </div>
 
       <div class="navgroup">
         <p class="navgroup__title">perfil y via de contactos</p>
 
-        <a class="navlink" href="billing.html "aria-current="page">
+        <a class="navlink" href="billing.html">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M2 10h20"/></svg>
           <span>Actualizar perfil</span>
         </a>
-                        <a class="navlink" href="settings.html">
+                      <a class="navlink" href="settings.html">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1A1.6 1.6 0 0 0 9 19.4a1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1A1.6 1.6 0 0 0 4.6 9a1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1Z"/></svg>
           <span>contacto</span>
-=======
-        <a class="navlink" href="analytics.html#realtime">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h4l3 8 6-16 3 8h4"/></svg>
-          <span>Mi perfil</span>
-          <span class="navlink__tag navlink__tag--live">LIVE</span>
         </a>
-      </div>
 
-      <div class="navgroup">
-        <p class="navgroup__title">Manage</p>
-        <a class="navlink" href="customers.html">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="3.2"/><path d="M22 20v-2a4 4 0 0 0-3-3.8"/><path d="M16 3.2A4 4 0 0 1 16 11"/></svg>
-          <span>Mis eventos</span>
-          <span class="navlink__tag">248</span>
-        </a>
-        <a class="navlink" href="billing.html" aria-current="page">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M2 10h20"/></svg>
-          <span>Detalle de evento</span>
-        </a>
-        <a class="navlink" href="customers.html#segments">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16"/><path d="M7 12h10"/><path d="M10 19h4"/></svg>
-          <span>Mis cotizaciones</span>
-        </a>
-      </div>
-
-      <div class="navgroup">
-        <p class="navgroup__title">Configure</p>
-        <a class="navlink" href="settings.html">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1A1.6 1.6 0 0 0 9 19.4a1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1A1.6 1.6 0 0 0 4.6 9a1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1Z"/></svg>
-          <span>Detalle de cotización</span>
-        </a>
-        <a class="navlink" href="settings.html#api">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15.5 8.5 5-5"/><path d="m18 3 3 3"/><path d="M14 9a5 5 0 1 1-7 7 5 5 0 0 1 7-7Z"/></svg>
-          <span>Agenda</span>
->>>>>>> 7afedc21f1e58d3609c9f1cb863e09acc3171c93
-        </a>
       </div>
     </nav>
 
@@ -136,14 +145,32 @@
   </aside>
 
   <div class="railscrim" aria-hidden="true"></div>
+
   <!-- ===================================================================
         Main
         =================================================================== -->
-<<<<<<< HEAD
-<h1>actualizar perfil</h1>
-=======
-<h1>detalle de evento</h1>
->>>>>>> 7afedc21f1e58d3609c9f1cb863e09acc3171c93
+  
+    <form id="form_evento">
+        <fieldset>
+            <legend>Registrar evento</legend>
+
+            <div id="campos_formulario">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre completo">
+                <span class="mensaje_error" id="mensaje_nombre"></span>
+
+                <label for="correo">Correo</label>
+                <input type="text" id="correo" name="correo" placeholder="Ingrese su correo">
+                <span class="mensaje_error" id="mensaje_correo"></span>
+
+                <label for="evento">Evento</label>
+                <input type="text" id="evento" name="evento" placeholder="Ingrese el nombre del evento">
+                <span class="mensaje_error" id="mensaje_evento"></span>
+            </div>
+
+            <button type="button">REGISTRAR</button>
+        </fieldset>
+    </form>
 
 <!-- =====================================================================
       Command palette
