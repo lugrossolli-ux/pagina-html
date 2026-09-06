@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal - Sol de Alegría</title>
+
+    <link rel="stylesheet" href="assets/css/tokens.css">
+    <link rel="stylesheet" href="assets/css/shell.css">
+    <link rel="stylesheet" href="assets/css/ui.css">
+</head>
+
+<body>
+<div class="app" data-rail="expanded">
+    <aside class="rail">
+        <div class="rail__head">
+            <a class="brand" href="admin.html">
+                <span class="brand__mark" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="brand__word">Sol de Alegría</span>
+            </a>
+        </div>
+
+        <nav class="rail__scroll" aria-label="Menú de administración">
+            <div class="navgroup">
+                <p class="navgroup__title">Administración</p>
+                <a class="navlink" href="admin.html"><span>Dashboard</span></a>
+                <a class="navlink" href="analytics.html"><span>Eventos</span></a>
+                <a class="navlink" href="customers.html"><span>Clientes</span></a>
+                <a class="navlink" href="billing.html"><span>Cotizaciones</span></a>
+                <a class="navlink" href="personal.html" aria-current="page"><span>Personal</span></a>
+            </div>
+        </nav>
+
+        <div class="rail__foot">
+            <a class="btn btn--ghost" href="login.html">Cerrar sesión</a>
+        </div>
+    </aside>
+
+    <main>
+        <h1>Personal</h1>
+
+        <section class="panel">
+            <div class="panel__head">
+                <h2>Personal disponible</h2>
+            </div>
+
+            <div class="tablewrap">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Función</th>
+                            <th>Teléfono</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Camila Torres</td>
+                            <td>Coordinadora</td>
+                            <td>+56 9 5555 1111</td>
+                            <td>Disponible</td>
+                        </tr>
+                        <tr>
+                            <td>Felipe Muñoz</td>
+                            <td>Técnico de sonido</td>
+                            <td>+56 9 5555 2222</td>
+                            <td>Asignado</td>
+                        </tr>
+                        <tr>
+                            <td>Valentina Díaz</td>
+                            <td>Decoración</td>
+                            <td>+56 9 5555 3333</td>
+                            <td>Disponible</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</div>
+</body>
+</html>
