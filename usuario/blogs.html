@@ -1,20 +1,11 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="dark">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Cotizaciones - Sol de Alegría</title>
-<meta name="description" content="Listado de cotizaciones de Sol de Alegría Eventos." />
+<title>blogs</title>
+<meta name="description" content="Funnel, cohort retention and traffic analytics views from the Brynvel free HTML admin dashboard template." />
 
-<script>
-  /* Applied before paint so the chosen theme never flashes. */
-  (function () {
-    try {
-      var t = localStorage.getItem('brynvel-theme');
-      if (t) document.documentElement.dataset.theme = t;
-    } catch (e) {}
-  })();
-</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,8 +15,32 @@
 <link rel="stylesheet" href="assets/css/tokens.css" />
 <link rel="stylesheet" href="assets/css/shell.css" />
 <link rel="stylesheet" href="assets/css/ui.css" />
+
+
 </head>
 <body>
+  <style>
+      nav a {
+      color: rgb(17, 50, 167);          
+      text-decoration: none;  
+        }
+     h1{
+            text-align: center;
+            padding: 20px;
+        }
+
+        .caja_noticia{
+            background-color: rgb(92, 22, 22);
+            padding: 30px;
+            margin: 20px;
+        }
+
+
+        .titulo_noticia{
+            font-size: 22px;
+        }
+    </style>
+  </style>
 
 <div class="app" data-rail="expanded" data-mobilenav="closed">
 
@@ -34,113 +49,94 @@
         =================================================================== -->
      <aside class="rail">
     <div class="rail__head">
-      <a class="brand" href="admin.html" aria-label="Sol de Alegría - volver al dashboard">
+      <a class="brand" href="index.html" aria-label="Brynvel — go to overview">
         <span class="brand__mark" aria-hidden="true"><i></i><i></i><i></i></span>
-        <span class="brand__word">Sol de Alegría</span>
+        <span class="brand__word">Brynvel</span>
       </a>
     </div>
 
     <nav class="rail__scroll" aria-label="Main">
       <div class="navgroup">
-        <p class="navgroup__title">Administración</p>
-        <a class="navlink" href="admin.html">
+        <p class="navgroup__title">Pedir evento</p>
+        <a class="navlink" href="index.html" aria-current="page">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
-          <span>Dashboard</span>
+          <span>Evento</span>
         </a>
-        <a class="navlink" href="analytics.html" >
+        <a class="navlink" href="solicitar_evento.html" >
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18"/><path d="m5 15 4-5 4 3 6-8"/></svg>
-          <span>Eventos</span>
+          <span>Solicitar evento</span>
         </a>
-          <a class="navlink" href="customers.html">
+          <a class="navlink" href="detalles_de_evento.html">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="3.2"/><path d="M22 20v-2a4 4 0 0 0-3-3.8"/><path d="M16 3.2A4 4 0 0 1 16 11"/></svg>
-          <span>Clientes</span>
-          <span class="navlink__tag">24</span>
+          <span>Detalles del evento</span>
+          <span class="navlink__tag">248</span>
         </a>
 
       </div>
 
       <div class="navgroup">
-        <p class="navgroup__title">Gestión</p>
+        <p class="navgroup__title">perfil y via de contactos</p>
 
-        <a class="navlink" href="billing.html" aria-current="page">
+        <a class="navlink" href="actualizar_perfil.html">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M2 10h20"/></svg>
-          <span>Cotizaciones</span>
+          <span>Actualizar perfil</span>
         </a>
-                        <a class="navlink" href="personal.html">
+                        <a class="navlink" href="contacto.html">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1A1.6 1.6 0 0 0 9 19.4a1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1A1.6 1.6 0 0 0 4.6 9a1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1Z"/></svg>
-          <span>Personal</span>
+          <span>contacto</span>
         </a>
+        <a class="navlink" href="nostros.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1A1.6 1.6 0 0 0 9 19.4a1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1A1.6 1.6 0 0 0 4.6 9a1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1Z"/></svg>
+          <span>nosotros</span>
+        </a>
+          <a class="navlink" href="blogs.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1A1.6 1.6 0 0 0 9 19.4a1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1A1.6 1.6 0 0 0 4.6 9a1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1Z"/></svg>
+          <span>blogs</span>
+        </a>
+
       </div>
     </nav>
 
     <div class="rail__foot">
       <div class="usage">
         <div class="usage__row">
-          <span class="label">Eventos</span>
-          <span class="num soft">14 eventos</span>
+          <span class="label">Events</span>
+          <span class="num soft">742k / 1M</span>
         </div>
         <div class="usage__bar"><div class="usage__fill" style="width:74%"></div></div>
       </div>
-      <button class="userchip" type="button" data-toast="Menú de administrador de ejemplo">
+      <button class="userchip" type="button" data-toast="Account menu is a demo in this template">
         <img class="avatar avatar--sm" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&h=80&fit=crop&crop=faces" width="26" height="26" alt="" loading="lazy" />
         <span class="userchip__meta">
-          <span class="userchip__name">Administrador</span>
-          <span class="userchip__sub">Sol de Alegría</span>
+          <span class="userchip__name">Ada Ferreira</span>
+          <span class="userchip__sub">Growth · Owner</span>
         </span>
       </button>
     </div>
   </aside>
 
   <div class="railscrim" aria-hidden="true"></div>
+
+
   <!-- ===================================================================
         Main
         =================================================================== -->
-<main>
-<h1>Cotizaciones</h1>
+        <main>
+             <h1>NOTICIAS IMPORTANTES</h1>
 
-<section class="panel">
-  <div class="panel__head">
-    <h2>Cotizaciones registradas</h2>
-  </div>
+    <div class="caja_noticia">
+        <p class="titulo_noticia">Importante</p>
+        <p>chayane esta en casa agenda tu evento ahora<nav><a href="solicitar_evento.html">solicitar_evento</a></nav></p>
+    </div>
 
-  <div class="tablewrap">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Cliente</th>
-          <th>Evento</th>
-          <th>Monto</th>
-          <th>Estado</th>
-          <th>Detalle</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Claudia Rojas</td>
-          <td>Matrimonio</td>
-          <td>$450.000</td>
-          <td>Pendiente</td>
-          <td><a href="analytics.html">Ver evento</a></td>
-        </tr>
-        <tr>
-          <td>Diego Pérez</td>
-          <td>Cumpleaños</td>
-          <td>$280.000</td>
-          <td>Aprobada</td>
-          <td><a href="analytics.html">Ver evento</a></td>
-        </tr>
-        <tr>
-          <td>Marcela Soto</td>
-          <td>Evento corporativo</td>
-          <td>$700.000</td>
-          <td>En revisión</td>
-          <td><a href="analytics.html">Ver evento</a></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-</main>
+    <div class="caja_noticia">
+        <p class="titulo_noticia">Importante</p>
+        <p>DJ MARIO FUE PREMIADO COMO EL MEJOR DJ VE SU PISTA <nav><a href="detalles_de_evento.html">detalles de evento</a></nav></p>
+    </div>
+        
+
+        </main>
+   
 
 <!-- =====================================================================
       Command palette

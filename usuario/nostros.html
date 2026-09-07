@@ -3,18 +3,9 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Overview · Brynvel Console</title>
-<meta name="description" content="Brynvel — a free HTML admin dashboard template. Analytics console with charts, data tables, command palette, dark and light themes. No frameworks, no dependencies." />
+<title>nosotros</title>
+<meta name="description" content="Funnel, cohort retention and traffic analytics views from the Brynvel free HTML admin dashboard template." />
 
-<script>
-  /* Applied before paint so the chosen theme never flashes. */
-  (function () {
-    try {
-      var t = localStorage.getItem('brynvel-theme');
-      if (t) document.documentElement.dataset.theme = t;
-    } catch (e) {}
-  })();
-</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,117 +15,41 @@
 <link rel="stylesheet" href="assets/css/tokens.css" />
 <link rel="stylesheet" href="assets/css/shell.css" />
 <link rel="stylesheet" href="assets/css/ui.css" />
-    <style>
-        /* Comentario CSS */
-        body{
-            font-family: Helvetica, sans-serif;
-            background-color: rgb(240, 240, 240);
-            text-align: center;
-        }
-
-        h1{
-            color: gray;
-            padding: 20px;
-        }
-
-        /* id porque solo hay un contenedor de dashboard en la página */
-
-
-        #imagen_evento1{
-            width: 200px;
+<style>
+          #imagen_nosotros{
+            width: 400px;
             border: solid 1px gray;
-
-
             position: absolute;
             top: 100px;
-            left: 300px;
+            left: 530px;
         }
-        #titulo_evento1{
+        #titulo{
             position: absolute;
-            top: 80px;
-            left: 300px;
+            top: 0px;
+            left: 650px;
+            font-family: 'Arial', sans-serif; 
+            font-size: 36px; 
         }
-        #imagen_evento2{
-            width: 160px;
-            border: solid 1px gray;
+ #descripcion {
+    position: absolute;
+    top: 380px;        
+    left: 300px;        
+    width: 900px;       
+    font-family: 'Arial', sans-serif; 
+    font-size: 14px; 
+}
 
+</style>
 
-            position: absolute;
-            top: 100px;
-            left: 600px;
-        }
-        #titulo_evento2{
-            position: absolute;
-            top: 80px;
-            left: 600px;
-        }
-        #imagen_evento3{
-            width: 210px;
-            border: solid 1px gray;
-
-
-            position: absolute;
-            top: 100px;
-            left: 900px;
-        }
-        #titulo_evento3{
-            position: absolute;
-            top: 80px;
-            left: 900px;
-          }
-        #imagen_evento4{
-            width: 200px;
-            border: solid 1px gray;
-
-
-            position: absolute;
-            top: 300px;
-            left: 300px;
-        }
-        #titulo_evento4{
-            position: absolute;
-            top: 280px;
-            left: 300px;
-        }
-        #imagen_evento5{
-            width: 190px;
-            border: solid 1px gray;
-
-
-            position: absolute;
-            top: 300px;
-            left: 600px;
-        }
-        #titulo_evento5{
-            position: absolute;
-            top: 280px;
-            left: 600px;
-        }
-        #imagen_evento6{
-            width: 200px;
-            border: solid 1px gray;
-
-
-            position: absolute;
-            top: 300px;
-            left: 900px;
-        }
-        #titulo_evento6{
-            position: absolute;
-            top: 280px;
-            left: 900px;
-        }
-
-            </style>
 </head>
 <body>
 
 <div class="app" data-rail="expanded" data-mobilenav="closed">
 
   <!-- ===================================================================
-       Left rail
-       =================================================================== -->
-    <aside class="rail">
+        Left rail
+        =================================================================== -->
+ <aside class="rail">
     <div class="rail__head">
       <a class="brand" href="index.html" aria-label="Brynvel — go to overview">
         <span class="brand__mark" aria-hidden="true"><i></i><i></i><i></i></span>
@@ -149,11 +64,11 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
           <span>Evento</span>
         </a>
-        <a class="navlink" href="analytics.html" >
+        <a class="navlink" href="solicitar_evento.html" >
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18"/><path d="m5 15 4-5 4 3 6-8"/></svg>
           <span>Solicitar evento</span>
         </a>
-          <a class="navlink" href="customers.html">
+          <a class="navlink" href="detalles_de_evento.html">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="3.2"/><path d="M22 20v-2a4 4 0 0 0-3-3.8"/><path d="M16 3.2A4 4 0 0 1 16 11"/></svg>
           <span>Detalles del evento</span>
           <span class="navlink__tag">248</span>
@@ -164,13 +79,21 @@
       <div class="navgroup">
         <p class="navgroup__title">perfil y via de contactos</p>
 
-        <a class="navlink" href="billing.html">
+        <a class="navlink" href="actualizar_perfil.html">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M2 10h20"/></svg>
           <span>Actualizar perfil</span>
         </a>
-                        <a class="navlink" href="settings.html">
+                        <a class="navlink" href="contacto.html">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1A1.6 1.6 0 0 0 9 19.4a1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1A1.6 1.6 0 0 0 4.6 9a1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1Z"/></svg>
           <span>contacto</span>
+        </a>
+        <a class="navlink" href="nostros.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1A1.6 1.6 0 0 0 9 19.4a1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1A1.6 1.6 0 0 0 4.6 9a1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1Z"/></svg>
+          <span>nosotros</span>
+        </a>
+          <a class="navlink" href="blogs.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1A1.6 1.6 0 0 0 9 19.4a1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1A1.6 1.6 0 0 0 4.6 9a1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1Z"/></svg>
+          <span>blogs</span>
         </a>
 
       </div>
@@ -195,34 +118,33 @@
   </aside>
 
   <div class="railscrim" aria-hidden="true"></div>
-
   <!-- ===================================================================
-       Main
-       =================================================================== -->
-       <main>
-           <h1>eventos</h1>
-<img id="imagen_evento1" src="imagenes/evento 1.jpg" alt="Imagen del dashboard">
-        <p id="titulo_evento1">casa bonita 1</p>
-<img id="imagen_evento2" src="imagenes/evento 2.jpg" alt="Imagen del dashboard">
-        <p id="titulo_evento2">casa bonita 2</p>
-<img id="imagen_evento3" src="imagenes/evento 3.jpg" alt="Imagen del dashboard">
-        <p id="titulo_evento3">casa bonita 3</p>
-<img id="imagen_evento4" src="imagenes/evento 4.jpg" alt="Imagen del dashboard">
-        <p id="titulo_evento4">casa bonita 4</p>
-<img id="imagen_evento5" src="imagenes/evento 5.jpg" alt="Imagen del dashboard">
-        <p id="titulo_evento5">casa bonita 5</p>
-<img id="imagen_evento6" src="imagenes/evento 6.jpg" alt="Imagen del dashboard">
-        <p id="titulo_evento6">casa bonita 6</p>
+        Main
+        =================================================================== -->
+        <main>
+        <p id="titulo">Nosotros</p>
+<img id="imagen_nosotros" src="imagenes/evento nostros.jpg" alt="Imagen del dashboard">
+<p id="descripcion">
+    Somos una empresa de eventos creada en 2014 por su creadora, Valentina Morales, nacida con la visión de transformar
+     simples celebraciones en experiencias verdaderamente inolvidables. Con más de una década de trayectoria en el rubro, 
+    nos dedicamos al diseño, planificación y producción integral de eventos corporativos, sociales y culturales, adaptándonos a las necesidades particulares 
+    de cada cliente.
+    Nuestro equipo de profesionales apasionados trabaja con los más altos estándares 
+    de calidad, cuidando meticulosamente cada detalle desde la concepción de la idea 
+    hasta la ejecución final. Creemos firmemente que cada proyecto cuenta una historia 
+    única, por lo que combinamos innovación, creatividad y logística impecable para 
+    superar las expectativas y hacer realidad los sueños de quienes confían en nosotros. 
+    Nos distingue el compromiso con la excelencia, la calidez en el trato personalizado 
+    y la búsqueda constante de soluciones a la medida que garantizan el éxito absoluto 
+    de cada ocasión.
+</p>
 
-
-
-    </main>
-  </div>
-</div>
+        </main>
+   
 
 <!-- =====================================================================
-     Command palette
-     ===================================================================== -->
+      Command palette
+      ===================================================================== -->
 <div class="scrim" id="paletteScrim" data-open="false" aria-hidden="true"></div>
 <div class="palette" data-open="false" role="dialog" aria-modal="true" aria-label="Command palette">
   <input class="palette__input" type="text" placeholder="Search pages, customers, actions…" aria-label="Search" />
