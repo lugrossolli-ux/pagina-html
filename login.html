@@ -3,24 +3,20 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sign in · Brynvel Console</title>
-<meta name="description" content="Sign-in screen from Brynvel — a free HTML admin dashboard template with dark and light themes, charts and data tables." />
+<title>Iniciar sesión - Sol de Alegría</title>
+<meta name="description" content="Acceso a las áreas de Sol de Alegría." />
 
+<script src="assets/js/tema.js"></script>
 <script>
-  (function () {
-    try {
-      var t = localStorage.getItem('brynvel-theme');
-      if (t) document.documentElement.dataset.theme = t;
-    } catch (e) {}
-  })();
-
   function loginAs(role) {
-    if (role === 'admin' || role === 'staff') {
-      return;
-    }
-
     localStorage.setItem('user_role', role);
-    window.location.href = 'usuario/index.html?role=' + role;
+    if (role === 'admin') {
+      window.location.href = 'admin/index.html';
+    } else if (role === 'staff') {
+      window.location.href = 'staff/index.html';
+    } else {
+      window.location.href = 'usuario/index.html?role=' + role;
+    }
   }
 </script>
 
@@ -31,28 +27,29 @@
 <link rel="stylesheet" href="assets/css/tokens.css" />
 <link rel="stylesheet" href="assets/css/shell.css" />
 <link rel="stylesheet" href="assets/css/ui.css" />
+<link rel="stylesheet" href="assets/css/acceso.css" />
 </head>
 <body>
 
 <main class="auth">
 
   <section class="auth__form">
-    <a class="brand" href="index.html" aria-label="Brynvel — go to overview">
+    <a class="brand" href="usuario/index.html" aria-label="Sol de Alegría - inicio">
       <span class="brand__mark" aria-hidden="true"><i></i><i></i><i></i></span>
-      <span class="brand__word">Brynvel</span>
+      <span class="brand__word">Sol de Alegría</span>
     </a>
 
     <div>
-      <h1 style="font-size:var(--text-2xl);letter-spacing:-0.03em;margin-bottom:var(--s-2)">Iniciar Sesión</h1>
-      <p class="soft" style="font-size:var(--text-sm)">
+      <h1 class="acceso-titulo">Iniciar sesión</h1>
+      <p class="soft acceso-subtitulo">
         Selecciona un rol para acceder.
       </p>
     </div>
 
-    <form class="grid" style="gap:var(--s-4)" onsubmit="event.preventDefault(); loginAs('usuario');">
+    <form class="grid formulario-acceso" onsubmit="event.preventDefault(); loginAs('usuario');">
       <div class="field">
         <label for="l-email">Correo electrónico</label>
-        <input class="input" id="l-email" name="email" type="email" autocomplete="email" placeholder="usuario@empresa.com" value="demo@brynvel.com" />
+        <input class="input" id="l-email" name="email" type="email" autocomplete="email" placeholder="usuario@empresa.com" value="demo@gmail.com" />
       </div>
 
       <div class="field">
@@ -60,16 +57,14 @@
         <input class="input" id="l-pass" name="password" type="password" autocomplete="current-password" placeholder="••••••••••" value="123456" />
       </div>
 
-      <label style="font-size:var(--text-xs); font-weight:600; text-transform:uppercase; color:var(--fg-soft); letter-spacing:0.05em;">
-        Ingresar como:
-      </label>
+      <p class="label">Ingresar como:</p>
 
-      <!-- Botones de Roles -->
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-2);">
-        <button class="btn btn--ghost" type="button" onclick="loginAs('admin')" style="border: 1px solid var(--border-soft, #333)">
+      <!-- Acceso por rol -->
+      <div class="roles">
+        <button class="btn btn--ghost" type="button" onclick="loginAs('admin')">
           Administrador
         </button>
-        <button class="btn btn--ghost" type="button" onclick="loginAs('staff')" style="border: 1px solid var(--border-soft, #333)">
+        <button class="btn btn--ghost" type="button" onclick="loginAs('staff')">
           Staff
         </button>
         <button class="btn btn--primary" type="button" onclick="loginAs('usuario')">
@@ -78,32 +73,17 @@
       </div>
     </form>
 
-    <p class="muted" style="font-size:var(--text-xs)">
-      * Las secciones de Administrador y Staff están temporalmente deshabilitadas.
-    </p>
+    <a class="btn btn--ghost" href="registro.html">Crear cuenta</a>
+    <p class="muted acceso-subtitulo">Acceso de demostración. Selecciona un rol para recorrer el sitio.</p>
   </section>
 
   <aside class="auth__aside">
     <img class="auth__bg" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1400&q=70&auto=format&fit=crop"
          alt="" width="1400" height="933" fetchpriority="high" />
 
-    <blockquote class="auth__quote">
-      “Reemplazamos cuatro hojas de cálculo y llamadas semanales por un solo panel interactivo.”
-    </blockquote>
-
-    <div style="display:flex;align-items:center;gap:var(--s-3)">
-      <img class="avatar avatar--md" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=96&h=96&fit=crop&crop=faces" width="32" height="32" alt="" loading="lazy" />
-      <span class="person__meta">
-        <span class="person__name" style="color:#F2F6FC">Elin Sandberg</span>
-        <span class="person__sub" style="color:rgba(255,255,255,0.55)">VP Operations, Aurora Grid</span>
-      </span>
-    </div>
-
-    <div class="auth__proof">
-      <div><p class="num">2.4M</p><p class="label">Events / day</p></div>
-      <div><p class="num">99.98%</p><p class="label">Uptime</p></div>
-      <div><p class="num">184ms</p><p class="label">p95 latency</p></div>
-    </div>
+    <p class="auth__quote">Sol de Alegría</p>
+    <p class="soft">Organización de eventos.</p>
+    <p class="soft">Acceso para Administración, Staff y Usuario.</p>
   </aside>
 
 </main>

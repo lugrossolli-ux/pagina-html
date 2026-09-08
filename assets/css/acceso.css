@@ -1,0 +1,37 @@
+.formulario-acceso {
+  gap: var(--s-4);
+}
+
+.registro-form {
+  grid-column: 1 / -1;
+}
+
+.acceso-titulo {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--s-2);
+}
+
+.acceso-subtitulo {
+  font-size: var(--text-sm);
+}
+
+.roles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--s-2);
+}
+
+.roles .btn {
+  padding-inline: var(--s-2);
+  border: 1px solid var(--hairline);
+}
+
+.auth__aside .soft {
+  color: #A7B2C4;
+}
+
+@media (max-width: 480px) {
+  .roles {
+    grid-template-columns: 1fr;
+  }
+}

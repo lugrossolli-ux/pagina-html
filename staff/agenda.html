@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agenda y tareas - Sol de Alegría</title>
+  <meta name="description" content="Agenda y tareas de Sol de Alegría.">
+  <script src="../assets/js/tema.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@500;600;700;800&family=Schibsted+Grotesk:wght@400;500;600;700&family=Azeret+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/shell.css">
+  <link rel="stylesheet" href="../assets/css/ui.css">
+  <link rel="stylesheet" href="../assets/css/area.css">
+</head>
+<body>
+<div class="app" data-rail="expanded" data-mobilenav="closed">
+  <!-- Menú -->
+  <aside class="rail" id="menu-principal">
+    <div class="rail__head">
+      <a class="brand" href="index.html" aria-label="Sol de Alegría - inicio de Staff">
+        <span class="brand__mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="brand__word">Sol de Alegría</span>
+      </a>
+    </div>
+    <nav class="rail__scroll" aria-label="Menú de Staff">
+      <div class="navgroup">
+        <p class="navgroup__title">Staff</p>
+          <a class="navlink" href="index.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
+            <span>Inicio</span>
+          </a>
+          <a class="navlink" href="index.html#eventos">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18"/><path d="m5 15 4-5 4 3 6-8"/></svg>
+            <span>Eventos asignados</span>
+          </a>
+          <a class="navlink" href="agenda.html#tareas" aria-current="page">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1A1.6 1.6 0 0 0 9 19.4a1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1A1.6 1.6 0 0 0 4.6 9a1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1Z"/></svg>
+            <span>Agenda y tareas</span>
+          </a>
+          <a class="navlink" href="agenda.html#inventario">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M2 10h20"/></svg>
+            <span>Inventario</span>
+          </a>
+      </div>
+    </nav>
+    <div class="rail__foot">
+      <a class="btn btn--ghost" href="../login.html">Cerrar sesión</a>
+    </div>
+  </aside>
+  <div class="railscrim" aria-hidden="true"></div>
+  <div class="main">
+    <header class="cmdbar">
+      <button class="btn btn--ghost mobileonly" type="button" data-action="toggle-rail" aria-controls="menu-principal" aria-expanded="false">Menú</button>
+      <span class="label">Staff</span>
+      <div class="cmdbar__spacer"></div>
+      <button class="btn btn--ghost" type="button" data-action="toggle-theme">Tema</button>
+    </header>
+    <main class="page">
+      <h1>Agenda e inventario</h1>
+      <p class="soft">Revisa las tareas programadas y los artículos que deben prepararse.</p>
+      <section class="panel" id="tareas">
+        <div class="panel__head">
+          <h2>Agenda y tareas</h2>
+        </div>
+        <div class="tablewrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Fecha</th>
+                <th>Tarea</th>
+                <th>Evento</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>18/10/2026</td>
+                <td>Revisar equipos de sonido</td>
+                <td>Matrimonio Claudia Rojas</td>
+                <td>Pendiente</td>
+              </tr>
+              <tr>
+                <td>02/11/2026</td>
+                <td>Preparar materiales de montaje</td>
+                <td>Evento corporativo</td>
+                <td>Pendiente</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="panel" id="inventario">
+        <div class="panel__head">
+          <h2>Inventario</h2>
+        </div>
+        <div class="tablewrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Artículo</th>
+                <th>Cantidad</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Micrófonos</td>
+                <td>4</td>
+                <td>Revisar</td>
+              </tr>
+              <tr>
+                <td>Cables de audio</td>
+                <td>12</td>
+                <td>Disponible</td>
+              </tr>
+              <tr>
+                <td>Luces LED</td>
+                <td>6</td>
+                <td>Disponible</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+
+<div class="toasts" aria-live="polite"></div>
+<script src="../assets/js/app.js" defer></script>
+</body>
+</html>

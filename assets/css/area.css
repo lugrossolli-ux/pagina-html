@@ -1,0 +1,45 @@
+.page h1 {
+  font-size: var(--text-2xl);
+}
+
+.panel .btn {
+  margin-top: var(--s-4);
+}
+
+.panel p + p {
+  margin-top: var(--s-2);
+}
+
+.navlink--pendiente {
+  color: var(--fg-mute);
+  cursor: default;
+}
+
+.navlink--pendiente:hover {
+  background: transparent;
+  color: var(--fg-mute);
+}
+
+.table th,
+.table td {
+  white-space: nowrap;
+}
+
+.cmdbar .btn {
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .cmdbar {
+    gap: var(--s-2);
+    padding-inline: var(--s-3);
+  }
+
+  .cmdbar > .label {
+    display: none;
+  }
+
+  .page {
+    padding: var(--s-4);
+  }
+}

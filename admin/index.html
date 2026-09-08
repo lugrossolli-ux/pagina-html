@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inicio del administrador - Sol de Alegría</title>
+  <meta name="description" content="Inicio del administrador de Sol de Alegría.">
+  <script src="../assets/js/tema.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@500;600;700;800&family=Schibsted+Grotesk:wght@400;500;600;700&family=Azeret+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/shell.css">
+  <link rel="stylesheet" href="../assets/css/ui.css">
+  <link rel="stylesheet" href="../assets/css/area.css">
+</head>
+<body>
+<div class="app" data-rail="expanded" data-mobilenav="closed">
+  <!-- Menú -->
+  <aside class="rail" id="menu-principal">
+    <div class="rail__head">
+      <a class="brand" href="index.html" aria-label="Sol de Alegría - inicio de Administración">
+        <span class="brand__mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="brand__word">Sol de Alegría</span>
+      </a>
+    </div>
+    <nav class="rail__scroll" aria-label="Menú de Administración">
+      <div class="navgroup">
+        <p class="navgroup__title">Administración</p>
+          <a class="navlink" href="index.html" aria-current="page">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
+            <span>Inicio</span>
+          </a>
+          <a class="navlink" href="eventos.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18"/><path d="m5 15 4-5 4 3 6-8"/></svg>
+            <span>Eventos</span>
+          </a>
+          <span class="navlink navlink--pendiente" aria-disabled="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="3.2"/><path d="M22 20v-2a4 4 0 0 0-3-3.8"/><path d="M16 3.2A4 4 0 0 1 16 11"/></svg>
+            <span>Clientes</span><span class="navlink__tag">Pendiente</span>
+          </span>
+          <a class="navlink" href="cotizaciones.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M2 10h20"/></svg>
+            <span>Cotizaciones</span>
+          </a>
+          <a class="navlink" href="personal.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1A1.6 1.6 0 0 0 9 19.4a1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1A1.6 1.6 0 0 0 4.6 9a1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1Z"/></svg>
+            <span>Personal</span>
+          </a>
+      </div>
+    </nav>
+    <div class="rail__foot">
+      <a class="btn btn--ghost" href="../login.html">Cerrar sesión</a>
+    </div>
+  </aside>
+  <div class="railscrim" aria-hidden="true"></div>
+  <div class="main">
+    <header class="cmdbar">
+      <button class="btn btn--ghost mobileonly" type="button" data-action="toggle-rail" aria-controls="menu-principal" aria-expanded="false">Menú</button>
+      <span class="label">Administración</span>
+      <div class="cmdbar__spacer"></div>
+      <button class="btn btn--ghost" type="button" data-action="open-palette" aria-label="Buscar una página">Buscar</button>
+      <button class="btn btn--ghost" type="button" data-action="toggle-theme">Tema</button>
+    </header>
+    <main class="page">
+      <h1>Inicio del administrador</h1>
+      <section class="panel">
+        <div class="panel__head">
+          <h2>Clientes</h2>
+        </div>
+        <p>24 clientes registrados en el sistema</p>
+        <p class="soft">Vista de clientes pendiente.</p>
+      </section>
+      <section class="panel">
+        <div class="panel__head">
+          <h2>Eventos</h2>
+        </div>
+        <p>14 eventos registrados y próximos servicios</p>
+        <a class="btn btn--ghost" href="eventos.html">Ver eventos</a>
+      </section>
+      <section class="panel">
+        <div class="panel__head">
+          <h2>Cotizaciones</h2>
+        </div>
+        <p>8 cotizaciones esperan la revisión del administrador</p>
+        <a class="btn btn--ghost" href="cotizaciones.html">Ver cotizaciones</a>
+      </section>
+      <section class="panel">
+        <div class="panel__head">
+          <h2>Personal</h2>
+        </div>
+        <p>8 trabajadores disponibles para asignar a eventos</p>
+        <a class="btn btn--ghost" href="personal.html">Ver personal</a>
+      </section>
+      <section class="panel" id="inventario">
+        <div class="panel__head">
+          <h2>Inventario</h2>
+        </div>
+        <p>45 artículos registrados en el inventario</p>
+      </section>
+      <section class="panel" id="agenda">
+        <div class="panel__head">
+          <h2>Agenda</h2>
+        </div>
+        <p>6 tareas programadas para estas semanas</p>
+      </section>
+    </main>
+  </div>
+</div>
+
+<!-- Navegación rápida -->
+<div class="scrim" id="paletteScrim" data-open="false" aria-hidden="true"></div>
+<div class="palette" data-open="false" role="dialog" aria-modal="true" aria-label="Navegación rápida">
+  <input class="palette__input" type="text" placeholder="Buscar una página…" aria-label="Buscar una página">
+  <div class="palette__list">
+    <p class="palette__group label">Páginas</p>
+    <a class="palette__item" href="index.html">Inicio</a>
+    <a class="palette__item" href="eventos.html">Eventos</a>
+    <a class="palette__item" href="cotizaciones.html">Cotizaciones</a>
+    <a class="palette__item" href="personal.html">Personal</a>
+    <p class="palette__group label">Opciones</p>
+    <button class="palette__item" type="button" data-action="toggle-theme">Cambiar tema</button>
+    <a class="palette__item" href="../login.html">Cerrar sesión</a>
+    <p class="palette__empty" hidden>No se encontraron páginas.</p>
+  </div>
+</div>
+
+<div class="toasts" aria-live="polite"></div>
+<script src="../assets/js/app.js" defer></script>
+</body>
+</html>

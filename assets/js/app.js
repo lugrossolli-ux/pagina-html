@@ -30,7 +30,7 @@
   function syncThemeIcons() {
     var isLight = document.documentElement.dataset.theme === 'light';
     $$('[data-action="toggle-theme"]').forEach(function (btn) {
-      btn.setAttribute('aria-label', isLight ? 'Switch to dark theme' : 'Switch to light theme');
+      btn.setAttribute('aria-label', isLight ? 'Cambiar a tema oscuro' : 'Cambiar a tema claro');
       var sun = $('.icon-sun', btn);
       var moon = $('.icon-moon', btn);
       if (sun) sun.style.display = isLight ? 'none' : '';
@@ -45,24 +45,29 @@
     var app = $('.app');
     if (!app) return;
 
-    try {
-      if (localStorage.getItem('brynvel-rail') === 'collapsed') app.dataset.rail = 'collapsed';
-    } catch (e) {}
+    function cambiarMenu(abierto) {
+      app.dataset.mobilenav = abierto ? 'open' : 'closed';
+      $$('[data-action="toggle-rail"]').forEach(function (boton) {
+        boton.setAttribute('aria-expanded', String(abierto));
+      });
+    }
 
-    $$('[data-action="toggle-rail"]').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        if (window.matchMedia('(max-width: 1023px)').matches) {
-          app.dataset.mobilenav = app.dataset.mobilenav === 'open' ? 'closed' : 'open';
-          return;
-        }
-        var collapsed = app.dataset.rail === 'collapsed';
-        app.dataset.rail = collapsed ? 'expanded' : 'collapsed';
-        try { localStorage.setItem('brynvel-rail', collapsed ? 'expanded' : 'collapsed'); } catch (e) {}
+    $$('[data-action="toggle-rail"]').forEach(function (boton) {
+      boton.addEventListener('click', function () {
+        cambiarMenu(app.dataset.mobilenav !== 'open');
       });
     });
 
-    var scrim = $('.railscrim');
-    if (scrim) scrim.addEventListener('click', function () { app.dataset.mobilenav = 'closed'; });
+    var fondo = $('.railscrim');
+    if (fondo) fondo.addEventListener('click', function () { cambiarMenu(false); });
+
+    $$('.rail a').forEach(function (enlace) {
+      enlace.addEventListener('click', function () { cambiarMenu(false); });
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') cambiarMenu(false);
+    });
   }
 
   /* ------------------------------------------------------------------------
