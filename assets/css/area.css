@@ -43,3 +43,175 @@
     padding: var(--s-4);
   }
 }
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Arial, sans-serif;
+  letter-spacing: normal;
+  font-weight: 600;
+}
+
+.page h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.panel {
+  background: black;
+  border: 1px solid gray;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 20px;
+}
+
+.panel + .panel {
+  margin-top: 18px;
+}
+
+.panel__head {
+  border-bottom: 1px solid gray;
+  padding-bottom: 10px;
+  margin-bottom: 12px;
+}
+
+.panel__head h2 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.clientes-lista {
+  list-style: disc;
+  margin: 12px 0 0;
+  padding-left: 20px;
+}
+
+.clientes-lista li + li {
+  margin-top: 6px;
+}
+
+.btn,
+.btn--ghost {
+  border: 1px solid white;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.btn--ghost:hover {
+  background: gray;
+}
+
+.panel:nth-of-type(1) {
+  border-color: blue;
+}
+
+.panel:nth-of-type(1) .panel__head {
+  border-bottom-color: blue;
+}
+
+.panel:nth-of-type(1) h2 {
+  color: lightblue;
+}
+
+.panel:nth-of-type(2) {
+  border-color: green;
+}
+
+.panel:nth-of-type(2) .panel__head {
+  border-bottom-color: green;
+}
+
+.panel:nth-of-type(2) h2 {
+  color: lightgreen;
+}
+
+.panel:nth-of-type(3) {
+  border-color: red;
+}
+
+.panel:nth-of-type(3) .panel__head {
+  border-bottom-color: red;
+}
+
+.panel:nth-of-type(3) h2 {
+  color: red;
+}
+
+.panel:nth-of-type(4) {
+  border-color: blue;
+}
+
+.panel:nth-of-type(4) .panel__head {
+  border-bottom-color: blue;
+}
+
+.panel:nth-of-type(4) h2 {
+  color: lightblue;
+}
+
+.table th,
+.table td {
+  border-bottom: 1px solid gray;
+  padding: 10px;
+}
+
+.table thead th {
+  background: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.table th {
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+}
+
+.table tbody tr:hover {
+  background: transparent;
+}
+
+.galeria-eventos {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.imagen-evento {
+  width: 200px;
+  margin: 0;
+}
+
+.imagen-evento img {
+  width: 200px;
+  height: 130px;
+  object-fit: cover;
+  border: 1px solid gray;
+}
+
+.imagen-evento figcaption {
+  margin-top: 8px;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .page h1 {
+    font-size: 1.6rem;
+  }
+
+  .panel {
+    padding: 15px;
+  }
+
+  .imagen-evento,
+  .imagen-evento img {
+    width: 100%;
+    height: auto;
+  }
+}

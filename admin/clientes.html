@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clientes - Sol de Alegría</title>
+  <script src="../assets/js/tema.js"></script>
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/shell.css">
+  <link rel="stylesheet" href="../assets/css/ui.css">
+  <link rel="stylesheet" href="../assets/css/area.css">
+</head>
+<body>
+<div class="app" data-rail="expanded" data-mobilenav="closed">
+  <aside class="rail" id="menu-principal">
+    <div class="rail__head">
+      <a class="brand" href="index.html">
+        <span class="brand__mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="brand__word">Sol de Alegría</span>
+      </a>
+    </div>
+    <nav class="rail__scroll" aria-label="Menú de Administración">
+      <div class="navgroup">
+        <p class="navgroup__title">Administración</p>
+        <a class="navlink" href="index.html"><span>Inicio</span></a>
+        <a class="navlink" href="eventos.html"><span>Eventos</span></a>
+        <a class="navlink" href="clientes.html" aria-current="page">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="3.2"/><path d="M22 20v-2a4 4 0 0 0-3-3.8"/><path d="M16 3.2A4 4 0 0 1 16 11"/></svg>
+          <span>Clientes</span>
+        </a>
+        <a class="navlink" href="cotizaciones.html"><span>Cotizaciones</span></a>
+        <a class="navlink" href="personal.html"><span>Personal</span></a>
+      </div>
+    </nav>
+    <div class="rail__foot">
+      <a class="btn btn--ghost" href="../login.html">Cerrar sesión</a>
+    </div>
+  </aside>
+
+  <div class="railscrim" aria-hidden="true"></div>
+
+  <div class="main">
+    <header class="cmdbar">
+      <button class="btn btn--ghost mobileonly" type="button" data-action="toggle-rail" aria-controls="menu-principal" aria-expanded="false">Menú</button>
+      <span class="label">Administración</span>
+      <div class="cmdbar__spacer"></div>
+      <button class="btn btn--ghost" type="button" data-action="toggle-theme">Tema</button>
+    </header>
+
+    <main class="page">
+      <h1>Clientes</h1>
+      <section class="panel">
+        <div class="panel__head">
+          <h2>Lista de clientes</h2>
+        </div>
+        <ul class="clientes-lista">
+          <li>Claudia Rojas</li>
+          <li>Diego Pérez</li>
+          <li>Marcela Soto</li>
+          <li>Felipe González</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+</div>
+
+<script src="../assets/js/app.js" defer></script>
+</body>
+</html>
