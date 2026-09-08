@@ -3,18 +3,9 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Settings · Brynvel Console</title>
-<meta name="description" content="Profile, team, notification and API key settings screens — Brynvel free HTML admin dashboard template." />
+<title>solicitar evento</title>
+<meta name="description" content="Funnel, cohort retention and traffic analytics views from the Brynvel free HTML admin dashboard template." />
 
-<script>
-  /* Applied before paint so the chosen theme never flashes. */
-  (function () {
-    try {
-      var t = localStorage.getItem('brynvel-theme');
-      if (t) document.documentElement.dataset.theme = t;
-    } catch (e) {}
-  })();
-</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,6 +15,68 @@
 <link rel="stylesheet" href="assets/css/tokens.css" />
 <link rel="stylesheet" href="assets/css/shell.css" />
 <link rel="stylesheet" href="assets/css/ui.css" />
+    <style>
+        body{
+            font-family: Helvetica, sans-serif;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+        h1{
+            color: white;
+            padding: 20px;
+        }
+
+        fieldset{
+            width: 700px;
+            margin: 60px auto;
+            padding: 30px;
+            border: solid 1px white;
+            background-color: rgb(82, 135, 177);
+            text-align: left;
+        }
+
+        legend{
+            font-weight: bold;
+            padding: 1 10px;
+        }
+
+        label{
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        input[type="text"]{
+            width: 100%;
+            padding: 8px;
+            border: solid 1px gray;
+            background-color: white;
+            color: black;
+        }
+
+        button{
+            display: block;
+            margin: 30px auto 10px auto;
+            padding: 10px 30px;
+            background-color: white;
+            color: black;
+            border: solid 1px gray;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+    "use strict";
+
+    function registrar(){
+        console.log("-- función registrar --");
+
+        var elemento_mensaje = document.getElementById("mensaje_registro");
+        elemento_mensaje.innerHTML = "Datos registrados";
+    }
+</script>
 </head>
 <body>
 
@@ -36,14 +89,14 @@
     <div class="rail__head">
       <a class="brand" href="index.html" aria-label="Brynvel — go to overview">
         <span class="brand__mark" aria-hidden="true"><i></i><i></i><i></i></span>
-        <span class="brand__word">Brynvel</span>
+        <span class="brand__word">Sol de alegria</span>
       </a>
     </div>
 
     <nav class="rail__scroll" aria-label="Main">
       <div class="navgroup">
         <p class="navgroup__title">Pedir evento</p>
-        <a class="navlink" href="index.html" aria-current="page">
+        <a class="navlink" href="index.html" >
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
           <span>Evento</span>
         </a>
@@ -54,7 +107,12 @@
           <a class="navlink" href="detalles_de_evento.html">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="3.2"/><path d="M22 20v-2a4 4 0 0 0-3-3.8"/><path d="M16 3.2A4 4 0 0 1 16 11"/></svg>
           <span>Detalles del evento</span>
-          <span class="navlink__tag">248</span>
+          <span class="navlink__tag"></span>
+        </a>
+          <a class="navlink" href="djs.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="3.2"/><path d="M22 20v-2a4 4 0 0 0-3-3.8"/><path d="M16 3.2A4 4 0 0 1 16 11"/></svg>
+          <span>Mejores temas djs</span>
+          <span class="navlink__tag"></span>
         </a>
 
       </div>
@@ -62,11 +120,8 @@
       <div class="navgroup">
         <p class="navgroup__title">perfil y via de contactos</p>
 
-        <a class="navlink" href="actualizar_perfil.html">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M2 10h20"/></svg>
-          <span>Actualizar perfil</span>
-        </a>
-                        <a class="navlink" href="contacto.html">
+
+                        <a class="navlink" href="contacto.html"aria-current="page">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1A1.6 1.6 0 0 0 9 19.4a1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1A1.6 1.6 0 0 0 4.6 9a1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1Z"/></svg>
           <span>contacto</span>
         </a>
@@ -79,148 +134,45 @@
           <span>blogs</span>
         </a>
 
+        <a class="navlink" href="../login.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="3.2"/><path d="M22 20v-2a4 4 0 0 0-3-3.8"/><path d="M16 3.2A4 4 0 0 1 16 11"/></svg>
+          <span>cerrar sesión</span>
+          <span class="navlink__tag"></span>
+        </a>
       </div>
     </nav>
-
-    <div class="rail__foot">
-      <div class="usage">
-        <div class="usage__row">
-          <span class="label">Events</span>
-          <span class="num soft">742k / 1M</span>
-        </div>
-        <div class="usage__bar"><div class="usage__fill" style="width:74%"></div></div>
-      </div>
-      <button class="userchip" type="button" data-toast="Account menu is a demo in this template">
-        <img class="avatar avatar--sm" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&h=80&fit=crop&crop=faces" width="26" height="26" alt="" loading="lazy" />
-        <span class="userchip__meta">
-          <span class="userchip__name">Ada Ferreira</span>
-          <span class="userchip__sub">Growth · Owner</span>
-        </span>
-      </button>
-    </div>
   </aside>
 
   <div class="railscrim" aria-hidden="true"></div>
+
+
   <!-- ===================================================================
         Main
         =================================================================== -->
-  <h1>contacto</h1>
+  
+    <form id="form_evento">
+        <fieldset>
+            <legend>Ingresa tus datos para contactar</legend>
 
-          <!-- ========================= Notifications ========================= -->
-          <div id="s-notify" role="tabpanel" aria-labelledby="v-notify" hidden>
-            <form class="panel" data-demo-form="Notification preferences saved">
-              <div class="sechead"><h2>Notifications</h2></div>
-              <div class="grid" style="gap:0">
-                <div class="substats__row">
-                  <div><p style="font-weight:600;font-size:var(--text-sm)">Weekly summary</p><p class="hint" style="font-size:var(--text-xs);color:var(--fg-mute)">Every Monday at 08:00 in your timezone.</p></div>
-                  <label class="switch"><input type="checkbox" checked /><span class="track"></span><span class="thumb"></span></label>
-                </div>
-                <div class="substats__row">
-                  <div><p style="font-weight:600;font-size:var(--text-sm)">Failed payments</p><p class="hint" style="font-size:var(--text-xs);color:var(--fg-mute)">Immediate email when a charge fails.</p></div>
-                  <label class="switch"><input type="checkbox" checked /><span class="track"></span><span class="thumb"></span></label>
-                </div>
-                <div class="substats__row">
-                  <div><p style="font-weight:600;font-size:var(--text-sm)">Usage threshold alerts</p><p class="hint" style="font-size:var(--text-xs);color:var(--fg-mute)">When any meter passes 80% of its limit.</p></div>
-                  <label class="switch"><input type="checkbox" checked /><span class="track"></span><span class="thumb"></span></label>
-                </div>
-                <div class="substats__row">
-                  <div><p style="font-weight:600;font-size:var(--text-sm)">Product announcements</p><p class="hint" style="font-size:var(--text-xs);color:var(--fg-mute)">New features and changelog highlights.</p></div>
-                  <label class="switch"><input type="checkbox" /><span class="track"></span><span class="thumb"></span></label>
-                </div>
-                <div class="substats__row">
-                  <div><p style="font-weight:600;font-size:var(--text-sm)">Anomaly detection</p><p class="hint" style="font-size:var(--text-xs);color:var(--fg-mute)">Alert when a metric moves more than 3σ from trend.</p></div>
-                  <label class="switch"><input type="checkbox" checked /><span class="track"></span><span class="thumb"></span></label>
-                </div>
-              </div>
-              <div style="display:flex;justify-content:flex-end;margin-top:var(--s-5)">
-                <button class="btn btn--primary" type="submit">Save preferences</button>
-              </div>
-            </form>
-          </div>
+            <div id="campos_formulario">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre completo">
+                <span class="mensaje_error" id="mensaje_nombre"></span>
 
-          <!-- =========================== API keys =========================== -->
-          <div id="s-api" role="tabpanel" aria-labelledby="v-api" hidden>
-            <section class="panel">
-              <div class="sechead">
-                <div>
-                  <h2>API keys</h2>
-                  <p class="sechead__meta">Keys are shown once at creation. Rotate anything that leaks.</p>
-                </div>
-                <button class="btn btn--primary btn--sm" type="button" data-toast="New key generated">Create key</button>
-              </div>
+                <label for="correo">Correo</label>
+                <input type="text" id="correo" name="correo" placeholder="Ingrese su correo">
+                <span class="mensaje_error" id="mensaje_correo"></span>
 
-              <div class="grid" style="gap:var(--s-4)">
-                <div>
-                  <div class="meter__head" style="margin-bottom:var(--s-2)">
-                    <span style="font-weight:600;font-size:var(--text-sm)">Production</span>
-                    <span class="badge badge--ok"><span class="dot"></span>Active</span>
-                  </div>
-                  <div class="copyrow">
-                    <code id="key-prod">bv_live_9f42a7c1e88d4b0fa63c</code>
-                    <button class="btn btn--icon" type="button" data-action="copy" data-copy-target="#key-prod" aria-label="Copy production key">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
-                    </button>
-                  </div>
-                  <p class="hint" style="font-size:var(--text-xs);color:var(--fg-mute);margin-top:var(--s-2)">Created 14 Mar 2026 · last used 2 minutes ago</p>
-                </div>
+                <label for="telefono">numero de teleofono</label>
+                <input type="text" id="evento" name="evento" placeholder="ingrese su numero de telefono">
+                <span class="mensaje_error" id="mensaje_evento"></span>
+            </div>
 
-                <div>
-                  <div class="meter__head" style="margin-bottom:var(--s-2)">
-                    <span style="font-weight:600;font-size:var(--text-sm)">Staging</span>
-                    <span class="badge badge--ok"><span class="dot"></span>Active</span>
-                  </div>
-                  <div class="copyrow">
-                    <code id="key-stage">bv_test_2c81be55a0d34e7790af</code>
-                    <button class="btn btn--icon" type="button" data-action="copy" data-copy-target="#key-stage" aria-label="Copy staging key">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
-                    </button>
-                  </div>
-                  <p class="hint" style="font-size:var(--text-xs);color:var(--fg-mute);margin-top:var(--s-2)">Created 02 Jan 2026 · last used 6 days ago</p>
-                </div>
+                  <button type="button" onclick="registrar()">REGISTRAR</button>
 
-                <div>
-                  <div class="meter__head" style="margin-bottom:var(--s-2)">
-                    <span style="font-weight:600;font-size:var(--text-sm)">Legacy import</span>
-                    <span class="badge badge--warn"><span class="dot"></span>Rotate soon</span>
-                  </div>
-                  <div class="copyrow">
-                    <code id="key-legacy">bv_live_44b0e9137fa2cc85d610</code>
-                    <button class="btn btn--icon" type="button" data-action="copy" data-copy-target="#key-legacy" aria-label="Copy legacy key">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
-                    </button>
-                  </div>
-                  <p class="hint" style="font-size:var(--text-xs);color:var(--fg-mute);margin-top:var(--s-2)">Created 19 Aug 2024 · 704 days old</p>
-                </div>
-              </div>
-            </section>
-          </div>
-
-          <!-- ========================== Danger zone ========================== -->
-          <div id="s-danger" role="tabpanel" aria-labelledby="v-danger" hidden>
-            <section class="panel danger-zone">
-              <div class="sechead"><h2>Danger zone</h2></div>
-              <div class="grid" style="gap:0">
-                <div class="substats__row">
-                  <div><p style="font-weight:600;font-size:var(--text-sm)">Transfer ownership</p><p class="hint" style="font-size:var(--text-xs);color:var(--fg-mute)">Move this workspace to another admin.</p></div>
-                  <button class="btn btn--ghost btn--sm" type="button" data-toast="Transfer flow is a demo in this template">Transfer</button>
-                </div>
-                <div class="substats__row">
-                  <div><p style="font-weight:600;font-size:var(--text-sm)">Purge event history</p><p class="hint" style="font-size:var(--text-xs);color:var(--fg-mute)">Deletes all ingested events older than 30 days. Cannot be undone.</p></div>
-                  <button class="btn btn--danger btn--sm" type="button" data-toast="Purge is disabled in this demo template">Purge</button>
-                </div>
-                <div class="substats__row">
-                  <div><p style="font-weight:600;font-size:var(--text-sm)">Delete workspace</p><p class="hint" style="font-size:var(--text-xs);color:var(--fg-mute)">Removes all data, integrations and members permanently.</p></div>
-                  <button class="btn btn--danger btn--sm" type="button" data-toast="Deletion is disabled in this demo template">Delete</button>
-                </div>
-              </div>
-            </section>
-          </div>
-        </div>
-      </section>
-
-    </main>
-  </div>
-</div>
+        <p id="mensaje_registro"></p>
+        </fieldset>
+    </form>
 
 <!-- =====================================================================
       Command palette
@@ -230,15 +182,15 @@
   <input class="palette__input" type="text" placeholder="Search pages, customers, actions…" aria-label="Search" />
   <div class="palette__list">
     <p class="palette__group label">Navigate</p>
-    <a class="palette__item" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>Eventos<kbd class="kbd">G O</kbd></a>
-    <a class="palette__item" href="solicitar_evento.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18"/><path d="m5 15 4-5 4 3 6-8"/></svg>Solicitar evento<kbd class="kbd">G A</kbd></a>
-    <a class="palette__item" href="detalles_de_evento.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3.2"/><path d="M16 20v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/></svg>Detalles del evento<kbd class="kbd">G C</kbd></a>
-    <a class="palette__item" href="actualizar_perfil.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M2 10h20"/></svg>Actualizar perfil<kbd class="kbd">G B</kbd></a>
-    <a class="palette__item" href="contacto.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M4 12h2M18 12h2M12 4v2M12 18v2"/></svg>Contacto<kbd class="kbd">G S</kbd></a>
+    <a class="palette__item" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>Overview<kbd class="kbd">G O</kbd></a>
+    <a class="palette__item" href="analytics.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18"/><path d="m5 15 4-5 4 3 6-8"/></svg>Analytics<kbd class="kbd">G A</kbd></a>
+    <a class="palette__item" href="customers.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3.2"/><path d="M16 20v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/></svg>Customers<kbd class="kbd">G C</kbd></a>
+    <a class="palette__item" href="billing.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M2 10h20"/></svg>Billing<kbd class="kbd">G B</kbd></a>
+    <a class="palette__item" href="settings.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M4 12h2M18 12h2M12 4v2M12 18v2"/></svg>Settings<kbd class="kbd">G S</kbd></a>
     <p class="palette__group label">Actions</p>
     <button class="palette__item" type="button" data-toast="Report builder is a demo in this template"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Create report</button>
     <button class="palette__item" type="button" data-action="toggle-theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>Toggle theme</button>
-    <a class="palette__item" href="../login.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/></svg>Cerrar sesión</a>
+    <a class="palette__item" href="login.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/></svg>Sign out</a>
     <p class="palette__empty" hidden>No matches.</p>
   </div>
 </div>

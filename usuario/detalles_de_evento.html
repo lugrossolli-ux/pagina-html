@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="dark">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Customers · Brynvel Console</title>
-<meta name="description" content="Sortable, filterable customer data table with bulk actions and a detail drawer — Brynvel free HTML admin template." />
+<title>Overview · Brynvel Console</title>
+<meta name="description" content="Brynvel — a free HTML admin dashboard template. Analytics console with charts, data tables, command palette, dark and light themes. No frameworks, no dependencies." />
 
 <script>
   /* Applied before paint so the chosen theme never flashes. */
@@ -24,80 +24,114 @@
 <link rel="stylesheet" href="assets/css/tokens.css" />
 <link rel="stylesheet" href="assets/css/shell.css" />
 <link rel="stylesheet" href="assets/css/ui.css" />
+    <style>
+        body{
+            font-family: Helvetica, sans-serif;
+            background-color: rgb(240, 240, 240);
+            text-align: center;
+        }
 
-<style>
-    /* DJ 1 */
-    #titulo_evento1 {
-        position: absolute;
-        top: 80px;
-        left: 50px;
-    }
-    #imagen_dj1 {
-        width: 200px;
-        border: solid 1px gray;
-        position: absolute;
-        top: 110px;
-        left: 50px;
-    }
-    #controles_musica1 {
-        position: absolute;
-        top: 380px;
-        left: 50px;
-        width: 200px;
-    }
+        h1{
+            color: gray;
+            padding: 20px;
+        }
 
-    /* DJ 2 */
-    #titulo_evento2 {
-        position: absolute;
-        top: 80px;
-        left: 400px;
-    }
-    #imagen_dj2 {
-        width: 200px;
-        border: solid 1px gray;
-        position: absolute;
-        top: 110px;
-        left: 400px;
-    }
-    #controles_musica2 {
-        position: absolute;
-        top: 380px;
-        left: 400px;
-        width: 200px;
-    }
+        #detalles_evento1{
+            width: 200px;
+            border: solid 1px gray;
+            background-color: rgb(56, 13, 225);
+            position: absolute;
+            top: 100px;
+            left: 300px;
+            text-align: left;
 
-    /* DJ 3 */
-    #titulo_evento3 {
-        position: absolute;
-        top: 80px;
-        left: 750px;
-    }
-    #imagen_dj3 {
-        width: 200px;
-        border: solid 1px gray;
-        position: absolute;
-        top: 110px;
-        left: 750px;
-    }
-    #controles_musica3 {
-        position: absolute;
-        top: 380px;
-        left: 750px;
-        width: 200px;
-    }
-    #titulo{
-      position: absolute;
-      top: 30px;
-      left: 280px;
-      font-size: 32px;
-    }
-</style>
+        }
+        #titulo_evento1{
+            position: absolute;
+            top: 80px;
+            left: 300px;
+        }
+        #detalles_evento2{
+            width: 160px;
+            border: solid 1px gray;
+            background-color: rgb(56, 13, 225);
+            position: absolute;
+            top: 100px;
+            left: 600px;
+            text-align: left;
+        }
+        #titulo_evento2{
+            position: absolute;
+            top: 80px;
+            left: 600px;
+        }
+        #detalles_evento3{
+            width: 210px;
+            border: solid 1px gray;
+            background-color: rgb(56, 13, 225);
+            position: absolute;
+            top: 100px;
+            left: 900px;
+            text-align: left;            
+        }
+        #titulo_evento3{
+            position: absolute;
+            top: 80px;
+            left: 900px;
+          }
+        #detalles_evento4{
+            width: 200px;
+            border: solid 1px gray;
+            background-color: rgb(56, 13, 225);
+            position: absolute;
+            top: 300px;
+            left: 300px;
+            text-align: left;
+        }
+        #titulo_evento4{
+            position: absolute;
+            top: 280px;
+            left: 300px;
+        }
+        #detalles_evento5{
+            width: 190px;
+            border: solid 1px gray;
+            background-color: rgb(56, 13, 225);
+            position: absolute;
+            top: 300px;
+            left: 600px;
+            text-align: left;
+        }
+        #titulo_evento5{
+            position: absolute;
+            top: 280px;
+            left: 600px;
+        }
+        #detalles_evento6{
+            width: 200px;
+            border: solid 1px gray;
+            background-color: rgb(56, 13, 225);
+            position: absolute;
+            top: 300px;
+            left: 900px;
+            text-align: left;
+        }
+        #titulo_evento6{
+            position: absolute;
+            top: 280px;
+            left: 900px;
+        }
+
+
+            </style>
 </head>
 <body>
 
 <div class="app" data-rail="expanded" data-mobilenav="closed">
 
-  <!-- Left rail -->
+  <!-- ===================================================================
+       Left rail
+       =================================================================== -->
   <aside class="rail">
     <div class="rail__head">
       <a class="brand" href="index.html" aria-label="Brynvel — go to overview">
@@ -109,171 +143,142 @@
     <nav class="rail__scroll" aria-label="Main">
       <div class="navgroup">
         <p class="navgroup__title">Pedir evento</p>
-        <a class="navlink" href="index.html" aria-current="page">
+        <a class="navlink" href="index.html" >
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
           <span>Evento</span>
         </a>
-        <a class="navlink" href="solicitar_evento.html">
+        <a class="navlink" href="solicitar_evento.html" >
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18"/><path d="m5 15 4-5 4 3 6-8"/></svg>
           <span>Solicitar evento</span>
         </a>
-        <a class="navlink" href="detalles_de_evento.html">
+          <a class="navlink" href="detalles_de_evento.html"aria-current="page">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="3.2"/><path d="M22 20v-2a4 4 0 0 0-3-3.8"/><path d="M16 3.2A4 4 0 0 1 16 11"/></svg>
           <span>Detalles del evento</span>
-          <span class="navlink__tag">248</span>
+          <span class="navlink__tag"></span>
         </a>
+          <a class="navlink" href="djs.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="3.2"/><path d="M22 20v-2a4 4 0 0 0-3-3.8"/><path d="M16 3.2A4 4 0 0 1 16 11"/></svg>
+          <span>Mejores temas djs</span>
+          <span class="navlink__tag"></span>
+        </a>
+
       </div>
 
       <div class="navgroup">
-        <p class="navgroup__title">Perfil y vía de contactos</p>
-        <a class="navlink" href="actualizar_perfil.html">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M2 10h20"/></svg>
-          <span>Actualizar perfil</span>
-        </a>
-        <a class="navlink" href="contacto.html">
+        <p class="navgroup__title">perfil y via de contactos</p>
+
+
+                        <a class="navlink" href="contacto.html">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1A1.6 1.6 0 0 0 9 19.4a1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1A1.6 1.6 0 0 0 4.6 9a1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1Z"/></svg>
-          <span>Contacto</span>
+          <span>contacto</span>
         </a>
         <a class="navlink" href="nostros.html">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1A1.6 1.6 0 0 0 9 19.4a1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1A1.6 1.6 0 0 0 4.6 9a1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1Z"/></svg>
-          <span>Nosotros</span>
+          <span>nosotros</span>
         </a>
-        <a class="navlink" href="blogs.html">
+          <a class="navlink" href="blogs.html">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1A1.6 1.6 0 0 0 9 19.4a1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1A1.6 1.6 0 0 0 4.6 9a1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1Z"/></svg>
-          <span>Blogs</span>
+          <span>blogs</span>
+        </a>
+
+        <a class="navlink" href="../login.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="3.2"/><path d="M22 20v-2a4 4 0 0 0-3-3.8"/><path d="M16 3.2A4 4 0 0 1 16 11"/></svg>
+          <span>cerrar sesión</span>
+          <span class="navlink__tag"></span>
         </a>
       </div>
     </nav>
-
-    <div class="rail__foot">
-      <div class="usage">
-        <div class="usage__row">
-          <span class="label">Events</span>
-          <span class="num soft">742k / 1M</span>
-        </div>
-        <div class="usage__bar"><div class="usage__fill" style="width:74%"></div></div>
-      </div>
-      <button class="userchip" type="button" data-toast="Account menu is a demo in this template">
-        <img class="avatar avatar--sm" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&h=80&fit=crop&crop=faces" width="26" height="26" alt="" loading="lazy" />
-        <span class="userchip__meta">
-          <span class="userchip__name">Ada Ferreira</span>
-          <span class="userchip__sub">Growth · Owner</span>
-        </span>
-      </button>
-    </div>
   </aside>
 
   <div class="railscrim" aria-hidden="true"></div>
 
-  <main style="position: relative; min-height: 500px;">
-    <!-- DJ 1 -->
-     <p id="titulo">Los mejores DJ y sus mayores existos</p>
-    <p id="titulo_evento1">DJ Mario</p>
-    <img id="imagen_dj1" src="imagenes/dj.jpg" alt="DJ Mario">
-    <form id="controles_musica1">
-        <fieldset>
-            <button type="button" id="botonPlay1" onclick="tema_musical.play()">Play</button>
-            <button type="button" id="botonPause1" onclick="tema_musical.pause()">Pause</button> 
-            <button type="button" id="botontoggle1" onclick="tema_musical.toggle()">Toggle</button>                       
-        </fieldset>
-    </form>
-    
 
-    <!-- DJ 2 -->
-    <p id="titulo_evento2">DJ Lucas</p>
-    <img id="imagen_dj2" src="imagenes/dj2.jpg" alt="DJ Lucas">
-    <form id="controles_musica2">
-        <fieldset>
-            <button type="button" id="botonPlay2" onclick="lista2.play()">Play</button>
-            <button type="button" id="botonPause2" onclick="lista2.pause()">Pause</button> 
-            <button type="button" id="botontoggle2" onclick="lista2.toggle()">Toggle</button>                       
-        </fieldset>
-    </form>
+  <!-- ===================================================================
+       Main
+       =================================================================== -->
+       <main>
+           <h1>Detalles de eventos</h1>
+        <p id="titulo_evento1">casa bonita 1 (20 personas MAX)</p>
+        <ul id="detalles_evento1">
+        <li>1 plato de fondo</li>
+        <li>1 dj</li>
+        <li>2 tragos por persona(piscola o roncola)</li>
+        </ul>          
+        </p>
+        <p id="titulo_evento2">casa bonita 2  (30 pesonas MAX)</p>
+        <ul id="detalles_evento2">
+        <li>1 plato de fondo</li>
+        <li>1 postre</li>
+        <li>1 dj</li>
+        <li>2 tragos por persona(piscola o roncola)</li>
+        <li>1 animador</li>
+        </ul> 
+        <p id="titulo_evento3">casa bonita 3 (40 personas MAX)</p>
+        <ul id="detalles_evento3">
+        <li>1 plato de fondo</li>
+        <li>1 postre</li>
+        <li>1 dj</li>
+        <li>3 tragos por persona(piscola o roncola)</li>
+        <li>1 animador</li>
+        <li>1 payaso</li>
+        </ul>
+        <p id="titulo_evento4">casa bonita 4 (50 personas MAX)</p>
+                <ul id="detalles_evento4">
+        <li>1 plato de fondo</li>
+        <li>3 postre</li>
+        <li>1 dj</li>
+        <li>3 tragos por persona(piscola o roncola)</li>
+        <li>1 animador</li>
+        <li>1 payaso</li>
+        </ul> 
+        <p id="titulo_evento5">casa bonita 5 (60 personas MAX)</p>
+        <ul id="detalles_evento5">
+        <li>1 plato de fondo</li>
+        <li>3 postre</li>
+        <li>1 dj</li>
+        <li>7 tragos por persona(piscola o roncola)</li>
+        <li>1 animador</li>
+        <li>1 payaso</li>
+        </ul>                                           
+        <p id="titulo_evento6">casa bonita 6 (70 personas MAX)</p>
+        <ul id="detalles_evento6">
+        <li>1 plato de fondo</li>
+        <li>3 postre</li>
+        <li>1 dj</li>
+        <li>3 tragos por persona(piscola o roncola)</li>
+        <li>1 animador</li>
+        <li>1 payaso</li>
+        <Li>INCRUYE A CHAYANE</li>    
+        </ul>
 
-    <!-- DJ 3 -->
-    <p id="titulo_evento3">DJ Épico</p>
-    <img id="imagen_dj3" src="imagenes/dj3.jpg" alt="DJ Épico">
-    <form id="controles_musica3">
-        <fieldset>
-            <button type="button" id="botonPlay3" onclick="lista3.play()">Play</button>
-            <button type="button" id="botonPause3" onclick="lista3.pause()">Pause</button> 
-            <button type="button" id="botontoggle3" onclick="lista3.toggle()">Toggle</button>                       
-        </fieldset>
-    </form>
-  </main>
 
+
+    </main>
+  </div>
 </div>
 
-<script>
-    let tema_musical = {
-        titulo: "cancion 1",
-        artista: "lisa",
-        duracion_minutos: 3,
-        duracion_segundos: 10,
-        path: "musica/cancion 1.mp3",
-        playing: false,
-        play: function () {
-            console.log("-- función play --");
-            if (!this.playing) {
-                console.log("Tocando " + this.titulo);
-                if (!this.audio) {
-                    this.audio = new Audio(this.path);
-                }
-                this.audio.play();
-                this.playing = true;
-            }
-        },
-        pause: function () {
-            console.log("-- función pause --");
-            if (this.playing) {
-                this.playing = false;
-                this.audio.pause();
-            }
-        },
-        toggle: function () {
-            if (this.playing) {
-                this.pause();
-            } else {
-                this.play();
-            }
-        },
-    };
+<!-- =====================================================================
+     Command palette
+     ===================================================================== -->
+<div class="scrim" id="paletteScrim" data-open="false" aria-hidden="true"></div>
+<div class="palette" data-open="false" role="dialog" aria-modal="true" aria-label="Command palette">
+  <input class="palette__input" type="text" placeholder="Search pages, customers, actions…" aria-label="Search" />
+  <div class="palette__list">
+    <p class="palette__group label">Navigate</p>
+    <a class="palette__item" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>Overview<kbd class="kbd">G O</kbd></a>
+    <a class="palette__item" href="analytics.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18"/><path d="m5 15 4-5 4 3 6-8"/></svg>Analytics<kbd class="kbd">G A</kbd></a>
+    <a class="palette__item" href="customers.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3.2"/><path d="M16 20v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/></svg>Customers<kbd class="kbd">G C</kbd></a>
+    <a class="palette__item" href="billing.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M2 10h20"/></svg>Billing<kbd class="kbd">G B</kbd></a>
+    <a class="palette__item" href="settings.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M4 12h2M18 12h2M12 4v2M12 18v2"/></svg>Settings<kbd class="kbd">G S</kbd></a>
+    <p class="palette__group label">Actions</p>
+    <button class="palette__item" type="button" data-toast="Report builder is a demo in this template"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Create report</button>
+    <button class="palette__item" type="button" data-action="toggle-theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>Toggle theme</button>
+    <a class="palette__item" href="login.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/></svg>Sign out</a>
+    <p class="palette__empty" hidden>No matches.</p>
+  </div>
+</div>
 
-    let lista2 = Object.create(tema_musical);
-    lista2.titulo = "cancion 2";
-    lista2.artista = "lisa";
-    lista2.path = "musica/cancion 2.mp3";
-    lista2.playing = false;
-    lista2.audio = null;
-
-    let lista3 = Object.create(tema_musical);
-    lista3.titulo = "cancion 3";
-    lista3.artista = "lisa";
-    lista3.path = "musica/cancion 3.mp3";
-    lista3.playing = false;
-    lista3.audio = null;
-
-    let lista4 = Object.create(tema_musical);
-    lista4.titulo = "cancion 4";
-    lista4.artista = "lisa";
-    lista4.path = "musica/cancion 4.mp3";
-    lista4.playing = false;
-    lista4.audio = null;
-
-    let lista5 = Object.create(tema_musical);
-    lista5.titulo = "cancion 5";
-    lista5.artista = "lisa";
-    lista5.path = "musica/cancion 5.mp3";
-    lista5.playing = false;
-    lista5.audio = null;
-
-    let lista6 = Object.create(tema_musical);
-    lista6.titulo = "cancion 6";
-    lista6.artista = "lisa";
-    lista6.path = "musica/cancion 6.mp3";
-    lista6.playing = false;
-    lista6.audio = null;
-</script>
+<div class="toasts" aria-live="polite"></div>
 
 <script src="assets/js/charts.js" defer></script>
 <script src="assets/js/app.js" defer></script>
