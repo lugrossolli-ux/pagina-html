@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cotizaciones - Sol de Alegría</title>
   <meta name="description" content="Cotizaciones de Sol de Alegría.">
-  <script src="../assets/js/tema.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@500;600;700;800&family=Schibsted+Grotesk:wght@400;500;600;700&family=Azeret+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -59,8 +58,6 @@
       <button class="btn btn--ghost mobileonly" type="button" data-action="toggle-rail" aria-controls="menu-principal" aria-expanded="false">Menú</button>
       <span class="label">Administración</span>
       <div class="cmdbar__spacer"></div>
-      <button class="btn btn--ghost" type="button" data-action="open-palette" aria-label="Buscar una página">Buscar</button>
-      <button class="btn btn--ghost" type="button" data-action="toggle-theme">Tema</button>
     </header>
     <main class="page">
       <h1>Cotizaciones</h1>
@@ -106,23 +103,6 @@
         </div>
       </section>
     </main>
-  </div>
-</div>
-
-<!-- Navegación rápida -->
-<div class="scrim" id="paletteScrim" data-open="false" aria-hidden="true"></div>
-<div class="palette" data-open="false" role="dialog" aria-modal="true" aria-label="Navegación rápida">
-  <input class="palette__input" type="text" placeholder="Buscar una página…" aria-label="Buscar una página">
-  <div class="palette__list">
-    <p class="palette__group label">Páginas</p>
-    <a class="palette__item" href="index.html">Inicio</a>
-    <a class="palette__item" href="eventos.html">Eventos</a>
-    <a class="palette__item" href="cotizaciones.html">Cotizaciones</a>
-    <a class="palette__item" href="personal.html">Personal</a>
-    <p class="palette__group label">Opciones</p>
-    <button class="palette__item" type="button" data-action="toggle-theme">Cambiar tema</button>
-    <a class="palette__item" href="../login.html">Cerrar sesión</a>
-    <p class="palette__empty" hidden>No se encontraron páginas.</p>
   </div>
 </div>
 
